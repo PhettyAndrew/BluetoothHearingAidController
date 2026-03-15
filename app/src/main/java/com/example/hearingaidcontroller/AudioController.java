@@ -21,7 +21,6 @@ public class AudioController {
         audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
 
         try {
-            // Use a silent MP3 file (must exist in res/raw/silent.mp3)
             mediaPlayer = MediaPlayer.create(context, R.raw.silent);
             if (mediaPlayer == null) {
                 Log.e(TAG, "Failed to create MediaPlayer: silent.mp3 missing?");
@@ -40,7 +39,7 @@ public class AudioController {
             Log.d(TAG, "Equalizer initialized: bands=" + numberOfBands
                     + ", min=" + bandLevelRange[0] + " max=" + bandLevelRange[1]);
 
-            // Print center frequencies for debugging
+            // Printing center frequencies for debugging
             for (short i = 0; i < numberOfBands; i++) {
                 int freq = equalizer.getCenterFreq(i);
                 Log.d(TAG, "Band " + i + " center freq: " + freq + " Hz");
@@ -115,7 +114,6 @@ public class AudioController {
         }
     }
 
-    // Optional: get current bass/treble (simplified, returns last set value)
     public int getBass() {
         return 50; // placeholder
     }

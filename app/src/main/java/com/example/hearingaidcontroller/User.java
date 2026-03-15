@@ -7,7 +7,6 @@ public class User {
     private String hearingLossType;
     private String password;
 
-    // Constructors, getters, setters
     public User() {}
 
     public User(String fullName, String email, String hearingLossType, String password) {

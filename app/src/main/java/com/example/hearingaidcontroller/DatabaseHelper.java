@@ -32,7 +32,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_BASS = "bass";
     private static final String COLUMN_TREBLE = "treble";
 
-    // Corrected CREATE TABLE statement for device_settings
     private static final String CREATE_USERS_TABLE = "CREATE TABLE " + TABLE_USERS + "("
             + COLUMN_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + COLUMN_FULL_NAME + " TEXT,"
@@ -68,7 +67,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // ---------- User operations ----------
+    // User operations
     public long addUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -133,7 +132,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return rows > 0;
     }
 
-    // ---------- Device Settings operations ----------
+    // Device Settings operations
     public long addOrUpdateDeviceSettings(DeviceSettings settings) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -144,7 +143,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_BASS, settings.getBassLevel());
         values.put(COLUMN_TREBLE, settings.getTrebleLevel());
 
-        // Check if exists
         Cursor cursor = db.query(TABLE_DEVICE_SETTINGS,
                 new String[]{COLUMN_SETTINGS_ID},
                 COLUMN_USER_ID_FK + "=? AND " + COLUMN_DEVICE_ADDRESS + "=?",

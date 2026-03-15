@@ -78,23 +78,14 @@ public class BluetoothHelper {
                 if (profile == BluetoothProfile.A2DP) {
                     List<BluetoothDevice> devices = proxy.getConnectedDevices();
                     connected.addAll(devices);
-                    // No need to close proxy here? We'll just use the list after.
                 }
-                // We can't return from here; instead, we'll need to handle asynchronously.
-                // For simplicity, we'll use a synchronous approach? Not possible directly.
-                // Better to use a callback. Let's redesign: we'll use a callback interface.
             }
 
             @Override
             public void onServiceDisconnected(int profile) { }
         }, BluetoothProfile.A2DP);
 
-        // This won't work synchronously. We need to either:
-        // 1. Use a callback and update UI when ready.
-        // 2. Or use a simple alternative: check ACL connection via BluetoothDevice.ACTION_ACL_CONNECTED broadcast (already used).
-        // So we'll just rely on broadcasts and update when they happen. For initial state, we can check via isConnected() if we have a way.
-
-        return connected; // This will be empty because async.
+        return connected;
     }
 
     public interface ConnectedDevicesCallback {

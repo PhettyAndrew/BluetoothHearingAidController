@@ -160,7 +160,7 @@ public class DevicesFragment extends Fragment {
         btnScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Check Bluetooth scan permission (Android 12+)
+                // Check Bluetooth scan permission
                 if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.BLUETOOTH_SCAN)
                         != PackageManager.PERMISSION_GRANTED) {
                     requestPermissions(new String[]{Manifest.permission.BLUETOOTH_SCAN}, REQUEST_BLUETOOTH_SCAN);
@@ -283,7 +283,6 @@ public class DevicesFragment extends Fragment {
                                 == PackageManager.PERMISSION_GRANTED) {
                     startDiscovery();
                 } else {
-                    // Still missing one, request again? We'll just show a message.
                     Toast.makeText(getActivity(), "All permissions are required for scanning", Toast.LENGTH_SHORT).show();
                 }
             } else {
