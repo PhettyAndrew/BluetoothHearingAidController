@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@android:drawable/picture_frame"
+        />
+    <item
+        android:id="@+id/devicesFragment"
+        android:title="Devices"
+        android:icon="@android:drawable/stat_sys_speakerphone"
+        />
+    <item
+        android:id="@+id/controlsFragment"
+        android:title="Controls"
+        android:icon="@android:drawable/ic_menu_manage"
+        />
+    <item
+        android:id="@+id/savedSettingsFragment"
+        android:title="Saved"
+        android:icon="@android:drawable/ic_menu_save" />
+</menu>

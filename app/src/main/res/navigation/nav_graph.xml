@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.hearingaidcontroller.ProfileFragment"
+        android:label="Profile" />
+    <fragment
+        android:id="@+id/devicesFragment"
+        android:name="com.example.hearingaidcontroller.DevicesFragment"
+        android:label="Devices" />
+    <fragment
+        android:id="@+id/controlsFragment"
+        android:name="com.example.hearingaidcontroller.ControlsFragment"
+        android:label="Controls" />
+    <fragment
+        android:id="@+id/savedSettingsFragment"
+        android:name="com.example.hearingaidcontroller.SavedSettingsFragment"
+        android:label="Saved" />
+
+</navigation>

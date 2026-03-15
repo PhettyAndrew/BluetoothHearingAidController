@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HearingAidController" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#ad46ff</item>
+        <item name="colorPrimaryVariant">#8200db</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">#96f7e4</item>
+        <item name="colorSecondaryVariant">#00786f</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.HearingAidController" parent="Base.Theme.HearingAidController" />
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ControlsFragment"
+    android:padding="16dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txtDeviceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Device: Not connected"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/txtVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume: 50"
+        android:textSize="16sp"/>
+
+    <SeekBar
+        android:id="@+id/seekVolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/txtBass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bass: 50"
+        android:textSize="16sp"/>
+
+    <SeekBar
+        android:id="@+id/seekBass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/txtTreble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Treble: 50"
+        android:textSize="16sp"/>
+
+    <SeekBar
+        android:id="@+id/seekTreble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Settings for this Device"/>
+
+</LinearLayout>
